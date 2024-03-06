@@ -1,0 +1,308 @@
+<div class="row justify-content-center">
+    <div class="col-12">
+        <div class="row align-items-center mb-2">
+            <div class="col">
+                <h2 class="h5 page-title">Fluxo de Caixa</h2>
+            </div>
+        </div>
+        <div class="card shadow my-4">
+            <div class="card-body">
+                <div class="row align-items-center my-4">
+                    <div class="col-md-4">
+                        <div class="mx-4">
+                            <strong
+                                class="mb-0 text-uppercase text-muted">Saldo</strong><br />
+                            <h3>R$ 2562.30</h3>
+                            <p class="text-muted">Saldo do mês atual...</p>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-6">
+                                <div class="p-4">
+                                    <span
+                                        class="fe fe-plus-square fe-16"></span>
+                                    <p
+                                        class="small text-uppercase text-muted mb-0">Receitas
+                                        Total</p>
+                                    <span class="h2 mb-0">R$ 123120,00</span>
+                                    <p class="small mb-0">
+                                        <span
+                                            class="fe fe-arrow-up text-success fe-12"></span>
+                                        <span class="text-muted ml-1">+1.5% que
+                                            o mês anterior</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-4">
+                                    <span
+                                        class="fe fe-minus-square fe-16"></span>
+                                    <p
+                                        class="small text-uppercase text-muted mb-0">Despesas
+                                        Total</p>
+                                    <span class="h2 mb-0">R$ 123120,00</span>
+                                    <p class="small mb-0">
+                                        <span
+                                            class="fe fe-arrow-up text-success fe-12"></span>
+                                        <span class="text-muted ml-1">+1.5% que
+                                            o mês anterior</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-6">
+                                <div class="p-4">
+                                    <span
+                                        class="fe fe-dollar-sign fe-16"></span>
+                                    <p
+                                        class="small text-uppercase text-muted mb-0">Lucro
+                                        Total</p>
+                                    <span class="h2 mb-0">R$ 123120,00</span>
+                                    <p class="small mb-0">
+                                        <span
+                                            class="fe fe-arrow-up text-success fe-12"></span>
+                                        <span class="text-muted ml-1">+1.5% que
+                                            o mês anterior</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-4">
+                                    <span class="fe fe-percent fe-16"></span>
+                                    <p
+                                        class="small text-uppercase text-muted mb-0">Lucratividade
+                                        Total</p>
+                                    <span class="h2 mb-0">10%</span>
+                                    <p class="small mb-0">
+                                        <span
+                                            class="fe fe-arrow-up text-success fe-12"></span>
+                                        <span class="text-muted ml-1">+1.5% que
+                                            o mês anterior</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row" style="height: 100%;">
+                            <div class="col-12" style="height: 100%;">
+                                <canvas id="lineChart"></canvas>
+                            </div>
+                        </div>
+                    </div> <!-- .col-md-8 -->
+                </div> <!-- end section -->
+            </div> <!-- .card-body -->
+        </div> <!-- .card -->
+        <div class="row">
+            <div class="col-12">
+                <div class="row my-4">
+                    <!-- Small table -->
+                    <div class="col-md-12">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <ul class="nav nav-pills nav-fill mb-3"
+                                    id="pills-tab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active text-white"
+                                            id="pills-home-tab"
+                                            data-toggle="pill"
+                                            href="#pills-home" role="tab"
+                                            aria-controls="pills-home"
+                                            aria-selected="true">Visão Anual</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content mb-1"
+                                    id="pills-tabContent">
+                                    <div class="tab-pane fade show active"
+                                        id="pills-home" role="tabpanel"
+                                        aria-labelledby="pills-home-tab">
+                                        <!-- table -->
+                                        <div class="table-responsive">
+                                            <table
+                                                class="table table-hover table-font text-white"
+                                                id="tabelaSF">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="sticky-column">Mês</th>
+                                                        <th>Jan</th>
+                                                        <th>Fev</th>
+                                                        <th>Mar</th>
+                                                        <th>Abr</th>
+                                                        <th>Mai</th>
+                                                        <th>Jun</th>
+                                                        <th>Jul</th>
+                                                        <th>Ago</th>
+                                                        <th>Set</th>
+                                                        <th>Out</th>
+                                                        <th>Nov</th>
+                                                        <th>Dez</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="table-border-bottom-0">
+                                                    <tr>
+                                                        <td class="sticky-column" style="text-align:right;">Saldo Inicial</td>
+                                                        <td
+                                                            id="saldo-1"></td>
+                                                        <td
+                                                            id="saldo-2"></td>
+                                                        <td
+                                                            id="saldo-3"></td>
+                                                        <td
+                                                            id="saldo-4"></td>
+                                                        <td
+                                                            id="saldo-5"></td>
+                                                        <td
+                                                            id="saldo-6"></td>
+                                                        <td
+                                                            id="saldo-7"></td>
+                                                        <td
+                                                            id="saldo-8"></td>
+                                                        <td
+                                                            id="saldo-9"></td>
+                                                        <td
+                                                            id="saldo-10"></td>
+                                                        <td
+                                                            id="saldo-11"></td>
+                                                        <td
+                                                            id="saldo-12"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="sticky-column"
+                                                            style="text-align:right;">Receitas</td>
+                                                        <td
+                                                            id="receita-1"></td>
+                                                        <td
+                                                            id="receita-2"></td>
+                                                        <td
+                                                            id="receita-3"></td>
+                                                        <td
+                                                            id="receita-4"></td>
+                                                        <td
+                                                            id="receita-5"></td>
+                                                        <td
+                                                            id="receita-6"></td>
+                                                        <td
+                                                            id="receita-7"></td>
+                                                        <td
+                                                            id="receita-8"></td>
+                                                        <td
+                                                            id="receita-9"></td>
+                                                        <td
+                                                            id="receita-10"></td>
+                                                        <td
+                                                            id="receita-11"></td>
+                                                        <td
+                                                            id="receita-12"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="sticky-column"
+                                                            style="text-align:right;">Despesas</td>
+                                                        <td
+                                                            id="despesa-1"></td>
+                                                        <td
+                                                            id="despesa-2"></td>
+                                                        <td
+                                                            id="despesa-3"></td>
+                                                        <td
+                                                            id="despesa-4"></td>
+                                                        <td
+                                                            id="despesa-5"></td>
+                                                        <td
+                                                            id="despesa-6"></td>
+                                                        <td
+                                                            id="despesa-7"></td>
+                                                        <td
+                                                            id="despesa-8"></td>
+                                                        <td
+                                                            id="despesa-9"></td>
+                                                        <td
+                                                            id="despesa-10"></td>
+                                                        <td
+                                                            id="despesa-11"></td>
+                                                        <td
+                                                            id="despesa-12"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="sticky-column"
+                                                            style="text-align:right;">Lucro/Prejuízo</td>
+                                                        <td id="lp-1"></td>
+                                                        <td id="lp-2"></td>
+                                                        <td id="lp-3"></td>
+                                                        <td id="lp-4"></td>
+                                                        <td id="lp-5"></td>
+                                                        <td id="lp-6"></td>
+                                                        <td id="lp-7"></td>
+                                                        <td id="lp-8"></td>
+                                                        <td id="lp-9"></td>
+                                                        <td id="lp-10"></td>
+                                                        <td id="lp-11"></td>
+                                                        <td id="lp-12"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="sticky-column"
+                                                            style="text-align:right;">Acumulado</td>
+                                                        <td
+                                                            id="acumulado-1"></td>
+                                                        <td
+                                                            id="acumulado-2"></td>
+                                                        <td
+                                                            id="acumulado-3"></td>
+                                                        <td
+                                                            id="acumulado-4"></td>
+                                                        <td
+                                                            id="acumulado-5"></td>
+                                                        <td
+                                                            id="acumulado-6"></td>
+                                                        <td
+                                                            id="acumulado-7"></td>
+                                                        <td
+                                                            id="acumulado-8"></td>
+                                                        <td
+                                                            id="acumulado-9"></td>
+                                                        <td
+                                                            id="acumulado-10"></td>
+                                                        <td
+                                                            id="acumulado-11"></td>
+                                                        <td
+                                                            id="acumulado-12"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="sticky-column"
+                                                            style="text-align:right;">Lucratividade</td>
+                                                        <td
+                                                            id="lucratividade-1"></td>
+                                                        <td
+                                                            id="lucratividade-2"></td>
+                                                        <td
+                                                            id="lucratividade-3"></td>
+                                                        <td
+                                                            id="lucratividade-4"></td>
+                                                        <td
+                                                            id="lucratividade-5"></td>
+                                                        <td
+                                                            id="lucratividade-6"></td>
+                                                        <td
+                                                            id="lucratividade-7"></td>
+                                                        <td
+                                                            id="lucratividade-8"></td>
+                                                        <td
+                                                            id="lucratividade-9"></td>
+                                                        <td
+                                                            id="lucratividade-10"></td>
+                                                        <td
+                                                            id="lucratividade-11"></td>
+                                                        <td
+                                                            id="lucratividade-12"></td>
+                                                    </tr>
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- / .row -->
+            </div>
+        </div> <!-- .row -->
